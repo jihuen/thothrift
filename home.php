@@ -41,7 +41,7 @@
 			</ul>
 	</div>
 
-		<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
+		<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" sty;le="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 					<h3 id="myModalLabel">My Account</h3>

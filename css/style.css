@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body{
 	background:url(../images/bg.png) repeat scroll left top #e7ebf2;
 	}
@@ -30,8 +32,7 @@ body{
 		text-indent:80px;
 		font-size:30px;
 		clear:both;
-		font-family:arial;
-	}
+		font-family: 'Poppins', sans-serif;	}
 	
 #header ul
 	{

@@ -29,6 +29,7 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<?php include 'announcement.html'; ?>
 <?php include 'navbar.html'; ?>
 	<div id="header">
 		<img src="img/logo.jpg">
