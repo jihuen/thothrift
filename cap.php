@@ -114,11 +114,11 @@
 
 	<div class="nav1">
 		<ul>
-			<li><a href="product.php">Basketball</a></li>
+			<li><a href="product.php">Top</a></li>
 			<li>|</li>
-			<li><a href="football.php" >Football</a></li>
+			<li><a href="bottom.php" >Bottom</a></li>
 			<li>|</li>
-			<li><a href="running.php" class="active" style="color:#111;">Running</a></li>
+			<li><a href="cap.php" class="active" style="color:#111;">Cap</a></li>
 		</ul>
 	</div>
 
@@ -129,7 +129,7 @@
 
 			<?php
 
-				$query = $conn->query("SELECT *FROM product WHERE category='running' ORDER BY product_id DESC") or die (mysqli_error());
+				$query = $conn->query("SELECT *FROM product WHERE category='cap' ORDER BY product_id DESC") or die (mysqli_error());
 
 					while($fetch = $query->fetch_array())
 						{
@@ -145,7 +145,7 @@
 						}else{
 							echo "<div class='float'>";
 							echo "<center>";
-							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='photo/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
+							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='picture/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
 							echo "P ".$fetch['product_price']."";
