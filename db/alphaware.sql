@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2017 at 05:30 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Dec 21, 2023 at 07:21 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -30,7 +31,7 @@ CREATE TABLE `admin` (
   `adminid` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
@@ -49,7 +50,20 @@ CREATE TABLE `contact` (
   `contact_id` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
   `message` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`contact_id`, `email`, `message`) VALUES
+(1, '', ''),
+(2, '', ''),
+(3, '', ''),
+(4, '', ''),
+(5, '', ''),
+(6, '', ''),
+(7, '', '');
 
 -- --------------------------------------------------------
 
@@ -69,7 +83,7 @@ CREATE TABLE `customer` (
   `telephone` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -85,40 +99,40 @@ CREATE TABLE `product` (
   `product_image` varchar(500) NOT NULL,
   `brand` varchar(100) NOT NULL,
   `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_size`, `product_image`, `brand`, `category`) VALUES
-(3, 'Nike Air Max Neon', '12000', '7', '1141103372nike15.jpg', 'Nike', 'basketball'),
-(4, 'Nike Air Max Green', '12000', '8', '832975975nike5.jpg', 'Nike', 'basketball'),
-(6, 'Adidas Gent', '13000', '9', '13634363832010-Adidas-Men-Basketball-Shoes-2.jpg', 'Adidas', 'basketball'),
-(7, 'Adidas 599 LRG', '15000', '8', '872686791Adidas Basketball Shoes 599_LRG.jpg', 'Adidas', 'basketball'),
-(8, 'Lebron 11 Siver', '18000', '8', '124030907nike13.jpg', 'Nike', 'basketball'),
-(9, 'Adidas Adizero Black', '18000', '10', '14237873113-adidas-Rose-Dominate-Adizero-shoes.jpg', 'Adidas', 'basketball'),
-(10, 'Adidas Adizero Blue', '18000', '10', '1024158586Adidas_Rose_Shoes_009.jpg', 'Adidas', 'basketball'),
-(11, 'Lebron 11 Red', '18000', '9', '567507982nike10.jpg', 'Nike', 'basketball'),
-(13, 'Nike Hypervenom', '10000', '12', '1312216564nike-hypervenoms-customize-fg-2015-outlet-neymar-colors-soccer-shoes-professional.jpg', 'Nike', 'football'),
-(14, 'Nike C Lou Generation', '12000', '11', '533123642013_Discount_Nike_C_Luo_9_Generation_Online_Blue_Green.jpg', 'Nike', 'football'),
-(15, 'Nike Mercurial Vapor 7 Superfly II FG Lightning', '12000', '12', '1157463277Nike-Mercurial-Vapor-7-Superfly-III-FG-Lightning-Soccer-Shoes-Fluorescent-Yellow-Black.jpg', 'Nike', 'football'),
-(16, 'Nike Magista Obra', '12000', '9', '335092704Cheap-Nike-Magista-Obra-.jpg', 'Nike', 'football'),
-(17, 'Adidas Chaussures', '12000', '8', '697721412chaussures001.jpg', 'Adidas', 'football'),
-(19, 'Nike Flyknit Lunar Green Blue', '8000', '9', '745184160Nike_Nike_Flyknit_Lunar_2_Mens_Fluorescent_Green_Blue_Running_Shoes_2015_Outlet.jpg', 'Nike', 'Running'),
-(20, 'Nike Flyknit Lunar Sea Blue', '8000', '10', '1239262802Nike_Nike_Flyknit_Lunar_2_Mens_Sky_Blue_Sea_Blue_Running_Shoes_2015_Cheap.jpg', 'Nike', 'Running'),
-(21, 'Nike Flyknit Green', '8000', '12', '470680173flyknit.jpg', 'Nike', 'Running'),
-(26, 'Nike Hypervenom Phantom', '15000', '8', '15416832542014-Nike-Hypervenom-Phantom-FG-Red-Fluorescent-Yellow.jpg', 'Nike', 'football'),
-(28, 'Adidas Adizero Red', '18000', '9', '153564340adidas-all-star-basketball-shoes-adizero-shadow.jpg', 'Adidas', 'basketball'),
-(29, 'Adidas Gents', '10000', '9', '14124685402-Adidas-gents-shoes-collection-2015-01.jpg', 'Adidas', 'Running'),
-(30, 'Nike Flyknit Gray & Pink', '8000', '11', '948731815nw1.jpg', 'Nike', 'Running'),
-(31, 'Reebok Zigtech Shake', '10000', '10', '245113227reebok-zigtech-shake-running-shoes-offer-lemonstore-1405-13-lemonstore@1.jpg', 'Reebok', 'Running'),
-(157, 'Reebok Blast', '10000', '9', '547866585reebok-blast-profile.jpg', 'Reebok', 'feature'),
-(21561, 'Lebron 11 ', '15000', '10', '1125171488heat-lebron-11-17.jpg', 'Nike', 'feature'),
-(51292, 'Adidas Adizero F50', '10000', '10', '1272267959adizero-F50-FG.jpg', 'Adidas', 'feature'),
-(358159, 'Flyknit 360', '8000', '8', '40329068flyknit.jpg', 'Nike', 'feature'),
-(431860, 'Nike Hypervenom Neymar Jr.', '12000', '9', '852236910hypervenom.png', 'Nike', 'feature'),
-(961461, 'Adidas Bounce Titan', '9000', '9', '367527167Rabatt_Prezzo_Ridotto_Adidas_Bounce_Titan_Herren_White_Schwarz_Running_Sho_Online.jpg', 'Adidas', 'feature');
+(3, 'PLAYBOY CASUAL PANTS', '12000', 'M', 'bottom1.jpg', 'PLAYBOY', 'bottom'),
+(4, 'THE NORTH FACE SUN STASH HAT', '12000', 'M', 'cap1.jpg', 'THE NORTH FACE', 'cap'),
+(6, 'HARAJUKU BEAR HOODIE', '13000', 'M', 'top1.jpg', 'HARAJUKU', 'top'),
+(7, 'jeans', '15000', 'M', 'bottom5.jpg', 'ELLE', 'bottom'),
+(8, 'Beechfield Herringbone Cap', '18000', 'freesize', 'cap2.jpg', 'Beechfield Herringbone', 'cap'),
+(9, 'Floral Lace Dress', '18000', 'M', 'top2.jpg', 'YENKYE', 'top'),
+(10, 'Champion jogger pants', '18000', '10', 'bottom6.jpg', 'Champion', 'bottom'),
+(11, 'Supreme Washed Chino Twill Camp Cap', '18000', 'freesize', 'cap3.jpg', 'Supreme Washed', 'cap'),
+(13, 'Fear of God Essentials Hoodie', '10000', 'M', 'top4.jpg', 'Essentials', 'top'),
+(14, 'Pull&Bear Pleated Skirt', '12000', 'M', 'bottom7.jpg', 'Pull&Bear', 'bottom'),
+(15, 'Polo Ralph Lauren Baseball Cap', '12000', 'freesize', 'cap4.jpg', 'Polo', 'cap'),
+(16, 'Los Angeles Hoodie', '12000', 'M', 'top5.jpg', 'Los Angeles', 'top'),
+(17, 'Demon Slayer Swetpants', '12000', '8', 'bottom8.jpg', 'DS', 'bottom'),
+(19, 'Brixton Vega Cap', '8000', '9', 'cap5.jpg', 'Brixton', 'cap'),
+(20, 'astronaut hoodie', '8000', '10', 'top6.jpg', 'DTF', 'top'),
+(21, 'Giorgio Armani', '8000', 'M', 'bottom12.jpg', 'Giorgio Armani', 'bottom'),
+(26, 'Adidas Cap', '15000', 'freesize', 'cap7.jpg', 'Adidas', 'cap'),
+(28, 'Shein Zip Up Hoodie', '18000', '9', 'top7.jpg', 'Shein', 'top'),
+(29, 'Alondra Long Skirt', '10000', '9', 'bottom13.jpg', 'Alondra', 'bottom'),
+(30, 'Letter C Baseball Vintage Cap', '8000', 'freesize', 'cap8.jpg', 'Shengang', 'cap'),
+(31, 'California', '10000', 'M', 'top9.jpg', 'Essentials', 'top'),
+(157, 'Womens High Waist Plaid Skirt ', '10000', '9', 'bottom14.jpg', 'TheUnknown', 'feature'),
+(21561, 'Cat Ears Pilot Glass Cap', '15000', '10', 'cap9.jpg', 'Chlorina', 'feature'),
+(51292, 'botton t-shirt', '10000', 'M', 'top10.jpg', 'AS', 'feature'),
+(358159, 'Vanessa Seward Burton', '8000', 'M', 'bottom15.jpg', 'VSB', 'feature'),
+(431860, 'PLAYBOY CASUAL PANTS', '12000', 'M', 'bottom2.jpg', 'PLAYBOY', 'feature'),
+(961461, 'Aelfric Eden Varsity Jacket', '9000', 'M', 'top12.jpg', 'Aelfric Eden', 'feature');
 
 -- --------------------------------------------------------
 
@@ -130,7 +144,7 @@ CREATE TABLE `stock` (
   `stock_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `qty` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `stock`
@@ -179,7 +193,7 @@ CREATE TABLE `transaction` (
   `amount` int(11) NOT NULL,
   `order_stat` varchar(100) NOT NULL,
   `order_date` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -192,7 +206,7 @@ CREATE TABLE `transaction_detail` (
   `product_id` int(11) NOT NULL,
   `order_qty` int(11) NOT NULL,
   `transaction_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables
@@ -249,26 +263,32 @@ ALTER TABLE `transaction_detail`
 --
 ALTER TABLE `admin`
   MODIFY `adminid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
   MODIFY `customerid` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
   MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
 --
 -- AUTO_INCREMENT for table `transaction_detail`
 --
 ALTER TABLE `transaction_detail`
   MODIFY `transacton_detail_id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
