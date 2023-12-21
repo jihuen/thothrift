@@ -113,7 +113,7 @@
 		?>
 				<div>
 					<center>
-						<img class="img-polaroid" style="width:400px; height:350px;" src="photo/<?php echo $row['product_image']; ?>">
+						<img class="img-polaroid" style="width:400px; height:350px;" src="picture/<?php echo $row['product_image']; ?>">
 						<h2 class="text-uppercase bg-primary"><?php echo $row['product_name']?></h2>
 						<h3 class="text-uppercase">Php <?php echo $row['product_price']?></h3>
 						<h3 class="text-uppercase">Size: <?php echo $row['product_size']?></h3>
