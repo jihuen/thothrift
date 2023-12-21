@@ -108,11 +108,11 @@
 
 		<div class="nav1">
 			<ul>
-				<li><a href="product1.php" class="active" style="color:#111;">Basketball</a></li>
+				<li><a href="product1.php" class="active" style="color:#111;">Top</a></li>
 				<li>|</li>
-				<li><a href="football1.php">Football</a></li>
+				<li><a href="bottom1.php">Bottom</a></li>
 				<li>|</li>
-				<li><a href="running1.php">Running</a></li>
+				<li><a href="cap1.php">Cap</a></li>
 			</ul>
 				<?php echo "<a href='cart.php?id=".$id."&action=view'><button class='btn btn-inverse' style='right:1%; position:fixed; top:10%;'><i class='icon-shopping-cart icon-white'></i> View Cart</button></a>" ?>
 		</div>
@@ -126,7 +126,7 @@
 			<?php
 				include ('function/addcart.php');
 
-				$query = $conn->query("SELECT *FROM product WHERE category='basketball' ORDER BY product_id DESC") or die (mysqli_error());
+				$query = $conn->query("SELECT *FROM product WHERE category='top' ORDER BY product_id DESC") or die (mysqli_error());
 
 					while($fetch = $query->fetch_array())
 						{
@@ -142,7 +142,7 @@
 						}else{
 							echo "<div class='float'>";
 							echo "<center>";
-							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='photo/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
+							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='picture/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
 							echo "P ".$fetch['product_price']."";
