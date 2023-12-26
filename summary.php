@@ -159,7 +159,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
     <input type="hidden" name="amount" value="<?php echo $amnt; ?>">
     <input type="hidden" name="cpp_header_image" value="http://www.phpgang.com/wp-content/uploads/gang.jpg">
     <input type="hidden" name="no_shipping" value="1">
-    <input type="hidden" name="currency_code" value="PHP">
+    <input type="hidden" name="currency_code" value="RM">
     <input type="hidden" name="handling" value="0">
     <input type="hidden" name="cancel_return" value="function/cancel.php">
     <input type="hidden" name="return" value="function/success.php">
