@@ -5,7 +5,7 @@ $item_price         = $_REQUEST['amt']; // Paypal received amount
 $item_currency      = $_REQUEST['cc']; // Paypal received currency type
 
 $price = '10.00';
-$currency='USD';
+$currency='RM';
 
 //Rechecking the product price and currency details
 if($item_price==$price && $item_currency==$currency)
@@ -18,7 +18,7 @@ else
     $content = "<h1>Payment Failed</h1>";
 }
 
-$title = "PayPal Payment in PHP";
-$heading = "Welcome to PayPal Payment PHP example.";
+$title = "PayPal Payment in RM";
+$heading = "Welcome to PayPal Payment RM example.";
 //include('html.inc');
 ?>
