@@ -26,7 +26,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THOthrift</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
