@@ -1,6 +1,7 @@
 <?php
-	include("function/login.php");
-	include("function/customer_signup.php");
+session_start();
+include("function/login.php");
+include("function/customer_signup.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,15 +26,8 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-			<ul>
-				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
-				<li><a href="#login"   data-toggle="modal">Login</a></li>
-			</ul>
-	</div>
-
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
 	<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -93,7 +87,7 @@
 			</ul>
 	</div>
 
-		<img src="picture/contactus.jpg" style="width:1150px; height:250px; border:1px solid #000; ">
+		<img src="img/contactus.png" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
 

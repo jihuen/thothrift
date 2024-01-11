@@ -1,8 +1,31 @@
 <?php
-	include("function/login.php");
-	include("function/customer_signup.php");
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
+session_start();
+
+include("function/login.php");
+include("function/customer_signup.php");
+
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+    // User is logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedInPage = "home.php";
+
+    // If the user is not already on the logged-in page, redirect
+    if ($currentPage !== $loggedInPage) {
+        header("Location: $loggedInPage");
+        exit();
+    }
+} else {
+    // User is not logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedOutPage = "index.php";
+
+    // If the user is not already on the non-logged-in page, redirect
+    if ($currentPage !== $loggedOutPage) {
+        header("Location: $loggedOutPage");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +53,8 @@
 </head>
 <body>
 <?php include 'announcement.html'; ?>
-<?php include 'navbar.html'; ?>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-			<ul>
-				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
-				<li><a href="#login"   data-toggle="modal">Login</a></li>
-			</ul>
-	</div>
+<?php include 'navbar.php'; ?>
+
 		<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>

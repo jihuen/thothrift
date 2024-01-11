@@ -1,6 +1,31 @@
 <?php
-	include("function/login.php");
-	include("function/customer_signup.php");
+session_start();
+
+include("function/login.php");
+include("function/customer_signup.php");
+
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+    // User is logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedInPage = "aboutus1.php";
+
+    // If the user is not already on the logged-in page, redirect
+    if ($currentPage !== $loggedInPage) {
+        header("Location: $loggedInPage");
+        exit();
+    }
+} else {
+    // User is not logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedOutPage = "aboutus.php";
+
+    // If the user is not already on the non-logged-in page, redirect
+    if ($currentPage !== $loggedOutPage) {
+        header("Location: $loggedOutPage");
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,14 +50,8 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-			<ul>
-				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
-				<li><a href="#login"   data-toggle="modal">Login</a></li>
-			</ul>
-	</div>
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
 
 	<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
@@ -93,19 +112,22 @@
 			</ul>
 	</div>
 
-		<img src="img/about1.jpg" style="width:1150px; height:250px; border:1px solid #000; ">
+		<img src="img/about1.jpeg" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
 
 	<legend>About Us</legend>
 		<div id="content">
-			<legend><h3>Mission</h3></legend>
-					<h4 style="text-indent:60px;">To provide a high quality footwear that suit the athletes style and to be one of the leading sports footwear apparel in the country.</h4>
+			<legend><h3>At THO THRIFT, we believe that fashion doesn't have to be costly</h3></legend>
+					<h4>Fashion is more than just wearing expensive clothes. It about making the most out of what we have.
+				In our store, we provide hand-picked beautiful clothes with just the cost of a fraction of your typical daily spending.</h4>
 			<br />
-				<legend><h3>Vision</h3></legend>
-					<h4 style="text-indent:60px;">Online Shoe Store, the company that inspire, motivate, and give determination to the sports enthusiast.</h4>
+				<legend><h3>Thrifting is here to stay.</h3></legend>
+					<h4>Reselling used clothes not only does good for those who wants to refresh their fashion needs,
+						 but also does good for the planet. We give new life to countless of used clothings, while also
+						 offsetting the environment cost of fashion.
+					</h4>
 			<br />
-
 		</div>
 	<br />
 </div>

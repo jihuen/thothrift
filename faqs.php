@@ -1,6 +1,31 @@
 <?php
-	include("function/login.php");
-	include("function/customer_signup.php");
+session_start();
+
+include("function/login.php");
+include("function/customer_signup.php");
+
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+    // User is logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedInPage = "faqs.php";
+
+    // If the user is not already on the logged-in page, redirect
+    if ($currentPage !== $loggedInPage) {
+        header("Location: $loggedInPage");
+        exit();
+    }
+} else {
+    // User is not logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedOutPage = "faqs1.php";
+
+    // If the user is not already on the non-logged-in page, redirect
+    if ($currentPage !== $loggedOutPage) {
+        header("Location: $loggedOutPage");
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>

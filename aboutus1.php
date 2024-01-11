@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -25,22 +25,8 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-
-			<?php
-				$id = (int) $_SESSION['id'];
-
-					$query = $conn->query ("SELECT * FROM customer WHERE customerid = '$id' ") or die (mysqli_error());
-					$fetch = $query->fetch_array ();
-			?>
-
-			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
-			</ul>
-	</div>
+<?php include 'announcement.html'; ?>
+<?php include 'navbar.php'; ?>
 
 	<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
@@ -103,20 +89,23 @@
 				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
 			</ul>
 	</div>
-		<img src="img/about1.jpg" style="width:1150px; height:250px; border:1px solid #000; ">
+		<img src="img/about1.jpeg" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
 
 
 	<legend>About Us</legend>
 		<div id="content">
-			<legend><h3>Mission</h3></legend>
-					<h4 style="text-indent:60px;">To provide a high quality footwear that suit the athletes style and to be one of the leading sports footwear apparel in the country.</h4>
+			<legend><h3>At THO THRIFT, we believe that fashion doesn't have to be costly</h3></legend>
+					<h4>Fashion is more than just wearing expensive clothes. It about making the most out of what we have.
+				In our store, we provide hand-picked beautiful clothes with just the cost of a fraction of your typical daily spending.</h4>
 			<br />
-				<legend><h3>Vision</h3></legend>
-					<h4 style="text-indent:60px;">Online Shoe Store, the company that inspire, motivate, and give determination to the sports enthusiast.</h4>
+				<legend><h3>Thrifting is here to stay.</h3></legend>
+					<h4>Reselling used clothes not only does good for those who wants to refresh their fashion needs,
+						 but also does good for the planet. We give new life to countless of used clothings, while also
+						 offsetting the environment cost of fashion.
+					</h4>
 			<br />
-
 		</div>
 	<br />
 </div>

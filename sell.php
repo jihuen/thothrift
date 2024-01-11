@@ -1,6 +1,31 @@
 <?php
-	include("function/login.php");
-	include("function/customer_signup.php");
+session_start();
+
+include("function/login.php");
+include("function/customer_signup.php");
+
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+    // User is logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedInPage = "sell1.php";
+
+    // If the user is not already on the logged-in page, redirect
+    if ($currentPage !== $loggedInPage) {
+        header("Location: $loggedInPage");
+        exit();
+    }
+} else {
+    // User is not logged in, check the current page
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    $loggedOutPage = "sell.php";
+
+    // If the user is not already on the non-logged-in page, redirect
+    if ($currentPage !== $loggedOutPage) {
+        header("Location: $loggedOutPage");
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,14 +50,8 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-			<ul>
-				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
-				<li><a href="#login"   data-toggle="modal">Login</a></li>
-			</ul>
-	</div>
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
 
 	<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
@@ -93,44 +112,22 @@
 			</ul>
 	</div>
 
+		<img src="img/thrift.png" style="width:1150px; height:250px; border:1px solid #000; ">
+	<br />
+	<br />
 
-
-
+	<legend>About Us</legend>
 		<div id="content">
-			<legend><h3>Privacy Policy</h3></legend>
-				<p>The Online Shoe Store Incorporated respect the privacy of the visitors
-					to the Online Shoe Store.com website and the local websites connected with it, and take great care to protect your
-					information.. This privacy policy tells you what information we collect from you, how we may use it and
-					the steps we take to ensure that it is protected.
-				</p>
-			<hr>
-				<h4>Protection of visitors information</h4>
-					<p>In order to protect the information you provide to us by visiting our website we have implemented various
-						security measures. Your personal information is contained behind secured networks and is only accessible
-						by a limited number of people, who have special access rights and are required to keep the information
-						confidential.Please keep in mind though that whenever you give out personal information online there is a
-						risk that third parties may intercept and use that information. While Online Shoe Store strives to protect its user's
-						personal information and privacy, we cannot guarantee the security of any information you disclose online
-						and you do so at your own risk.</p>
-			<hr>
-				<h4>Use of cookies</h4>
-					<p>A cookie is a small string of information that the website that you visit transfers to your computer for
-						identification purposes. Cookies can be used to follow your activity on the website and that information
-						helps us to understand your preferences and improve your website experience. Cookies are also used to
-						remember for instance your user name and password.</p>
-					<p>You can turn off all cookies, in case you prefer not to receive them. You can also have your computer warn
-						you whenever cookies are being used. For both options you have to adjust your browser settings
-						(like internet explorer). There are also software products available that can manage cookies for you.
-						Please be aware though that when you have set your computer to reject cookies, it can limit the
-						functionality of the website you visit and it’s possible then that you do not have access to some of the
-						features on the website.</p>
-			<hr>
-				<h4>Online policy</h4>
-					<p>The Privacy Policy does not extend to anything that is inherent in the operation of the internet, and
-						therefore beyond adidas' control, and is not to be applied in any manner contrary to applicable law or
-						governmental regulation. This online privacy policy only applies to information collected through our
-						website and not to information collected offline.</p>
-
+			<legend><h3>At THO THRIFT, we believe that fashion doesn't have to be costly</h3></legend>
+					<h4>Fashion is more than just wearing expensive clothes. It about making the most out of what we have.
+				In our store, we provide hand-picked beautiful clothes with just the cost of a fraction of your typical daily spending.</h4>
+			<br />
+				<legend><h3>Thrifting is here to stay.</h3></legend>
+					<h4>Reselling used clothes not only does good for those who wants to refresh their fashion needs,
+						 but also does good for the planet. We give new life to countless of used clothings, while also
+						 offsetting the environment cost of fashion.
+					</h4>
+			<br />
 		</div>
 	<br />
 </div>
