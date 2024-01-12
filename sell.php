@@ -140,6 +140,6 @@ if (isset($_SESSION['id'])) {
 						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
 					</ul>
 			</div>
-	</div>
+</div>
 </body>
 </html>
