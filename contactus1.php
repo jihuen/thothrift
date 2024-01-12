@@ -79,7 +79,7 @@
 	<br>
 <div id="container">
 
-		<img src="picture/contactus.jpg" style="width:1150px; height:250px; border:1px solid #000; ">
+		<img src="img/contactus.png" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
 
