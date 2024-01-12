@@ -28,24 +28,8 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>THO THRIFT</label>
-
-			<?php
-				$id = (int) $_SESSION['id'];
-
-					$query = $conn->query ("SELECT * FROM customer WHERE customerid = '$id' ") or die (mysqli_error());
-					$fetch = $query->fetch_array ();
-			?>
-
-			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a href="#profile"  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
-			</ul>
-	</div>
-
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
 	<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -97,8 +81,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	<br>
 <div id="container">
-	<?php include 'announcement.html'; ?>
-	<?php include 'navbar.php'; ?>
+	
 
 	<form method="post" class="well"  style="background-color:#fff; overflow:hidden;">
 	<table class="table" style="width:50%;">
