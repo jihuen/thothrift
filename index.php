@@ -99,7 +99,7 @@ if (isset($_SESSION['id'])) {
 					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
 				</div>
 					</form>
-			</div>
+		</div>
 	<br>
 
 	
