@@ -8,7 +8,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 ?>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -31,7 +31,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -97,16 +97,8 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	<br>
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
 
 	<form method="post" class="well"  style="background-color:#fff; overflow:hidden;">
 	<table class="table" style="width:50%;">
@@ -145,7 +137,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	</table>
 	<legend></legend>
-	<h4>TOTAL: Php <?php echo $amnt; ?></h4>
+	<h4>TOTAL: RM <?php echo $amnt; ?></h4>
 	</form>
 	<div class='pull-right'>
 <div class="">
@@ -159,7 +151,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
     <input type="hidden" name="amount" value="<?php echo $amnt; ?>">
     <input type="hidden" name="cpp_header_image" value="http://www.phpgang.com/wp-content/uploads/gang.jpg">
     <input type="hidden" name="no_shipping" value="1">
-    <input type="hidden" name="currency_code" value="PHP">
+    <input type="hidden" name="currency_code" value="RM">
     <input type="hidden" name="handling" value="0">
     <input type="hidden" name="cancel_return" value="function/cancel.php">
     <input type="hidden" name="return" value="function/success.php">
@@ -198,7 +190,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
 		</div>
 
 			<div id="foot">

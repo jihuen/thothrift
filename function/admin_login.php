@@ -18,7 +18,7 @@ if (isset($_POST['enter']))
 						{
 							session_start ();
 							$_SESSION['id'] = $row['adminid'];
-							header ("location:admin_home.php");
+							header ("location:admin_feature.php");
 						}
 						
 					

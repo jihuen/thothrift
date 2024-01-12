@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -27,7 +27,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -92,17 +92,6 @@
 
 
 	<br>
-<div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
 
 	<form method="post" class="well" style="background-color:#fff;">
 	<table class="table">
@@ -180,7 +169,7 @@ if (isset($_SESSION['cart']))
 		echo "<td><h4>".$price."</h4></td>";
 		echo "<td><h4><a href='cart.php?id=".$id."&action=add'><i class='icon-plus-sign'></i></a></td>";
 		echo "<td><h4><a href='cart.php?id=".$id."&action=remove'><i class='icon-minus-sign'></i></a></td>";
-		echo "<td><strong><h3>P ".$line_cost."</h3></strong>";
+		echo "<td><strong><h3>RM ".$line_cost."</h3></strong>";
 		echo "</tr>";
 		}
 
@@ -190,7 +179,7 @@ if (isset($_SESSION['cart']))
 		echo "<td></td>";
 		echo "<td></td>";
 		echo "<td><h2>TOTAL:</h2></td>";
-		echo "<td><strong><input type='hidden' value='".$total."' required name='total'><h2 class='text-danger'>P ".$total."</h2></strong></td>";
+		echo "<td><strong><input type='hidden' value='".$total."' required name='total'><h2 class='text-danger'>RM ".$total."</h2></strong></td>";
 		echo "<td></td>";
 		echo "<td><a class='btn btn-danger btn-sm pull-right' href='cart.php?id=".$id."&action=empty'><i class='fa fa-trash-o'></i> Empty cart</a></td>";
 		echo "</tr>";
@@ -238,16 +227,16 @@ if (isset($_SESSION['cart']))
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyright &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

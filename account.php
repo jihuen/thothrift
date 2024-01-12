@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.js"></script>
@@ -24,23 +24,9 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-
-			<?php
-				$id = (int) $_SESSION['id'];
-
-					$query = $conn->query ("SELECT * FROM customer WHERE customerid = '$id' ") or die (mysqli_error());
-					$fetch = $conn->fetch_array ();
-			?>
-
-			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li><a href="#profile" href  data-toggle="modal">Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
-			</ul>
-	</div>
-<div id="container">
+	<?php include 'announcement.html'; ?>
+	<?php include 'navbar.php'; ?>
+	<div id="container">
 
 
 							<?php
@@ -108,8 +94,8 @@
 
 
 
-	<br>
+		<br>
 
-</div>
+	</div>
 </body>
 </html>

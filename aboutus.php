@@ -30,7 +30,7 @@ if (isset($_SESSION['id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -101,16 +101,6 @@ if (isset($_SESSION['id'])) {
 
 	<br>
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="index.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
 
 		<img src="img/about1.jpeg" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
@@ -135,16 +125,16 @@ if (isset($_SESSION['id'])) {
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

@@ -1,11 +1,11 @@
 <?php
-	//include("function/session.php");
+	include("function/session.php");
 	include("db/dbconn.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -27,7 +27,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				/*$id = (int) $_SESSION['id'];
@@ -179,7 +179,7 @@ if (isset($_SESSION['cart']))
 		echo "<td><h4>".$price."</h4></td>";
 		echo "<td><h4><a href='cart.php?id=".$id."&action=add'><i class='icon-plus-sign'></i></a></td>";
 		echo "<td><h4><a href='cart.php?id=".$id."&action=remove'><i class='icon-minus-sign'></i></a></td>";
-		echo "<td><strong><h3>P ".$line_cost."</h3></strong>";
+		echo "<td><strong><h3>RM ".$line_cost."</h3></strong>";
 		echo "</tr>";
 		}
 
@@ -189,7 +189,7 @@ if (isset($_SESSION['cart']))
 		echo "<td></td>";
 		echo "<td></td>";
 		echo "<td><h2>TOTAL:</h2></td>";
-		echo "<td><strong><input type='hidden' value='".$total."' required name='total'><h2 class='text-danger'>P ".$total."</h2></strong></td>";
+		echo "<td><strong><input type='hidden' value='".$total."' required name='total'><h2 class='text-danger'>RM ".$total."</h2></strong></td>";
 		echo "<td></td>";
 		echo "<td><a class='btn btn-danger btn-sm pull-right' href='cart.php?id=".$id."&action=empty'><i class='fa fa-trash-o'></i> Empty cart</a></td>";
 		echo "</tr>";
@@ -237,7 +237,7 @@ if (isset($_SESSION['cart']))
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
 		</div>
 
 			<div id="foot">

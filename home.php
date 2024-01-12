@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.js"></script>
@@ -77,24 +77,9 @@
 
 
 	<br>
+
 <div id="container">
-
-
-
-
-	<div id="content">
-		<div class="nav">
-
-			 <ul>
-				<li><a href="home.php"><i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"><i class="icon-th-list"></i>Product</a>
-				<li><a href="aboutus1.php"><i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-		</div>
-
+		
 		<div id="carousel">
 			<div id="myCarousel" class="carousel slide">
 				<div class="carousel-inner">
@@ -114,7 +99,7 @@
 			</video>
 		</div>
 
-		<div id="product" style="position:relative; margin-top:30%;">
+		<div id="product" style="position:relative;">
 			<center><h2><legend>Featured Items</legend></h2></center>
 			<br />
 
@@ -139,7 +124,7 @@
 							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='picture/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
-							echo "P ".$fetch['product_price']."";
+							echo "RM ".$fetch['product_price']."";
 							echo "<br />";
 							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Size: ".$fetch['product_size']."</h3>";
 							echo "</center>";
@@ -150,9 +135,6 @@
 			?>
 		</div>
 
-
-	</div>
-
 		<br />
 </div>
 <br />
@@ -160,16 +142,16 @@
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyright &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

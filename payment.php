@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -27,7 +27,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -92,19 +92,7 @@
 
 
 	<br>
-<div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
-	<br>
-
+	
 	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr"  method="post">
         <!-- the cmd parameter is set to _xclick for a Buy Now button -->
 <?php
@@ -138,7 +126,7 @@ $grandtotal=$totalcharge+$total;
         <input type="hidden" name="amount" value="<?php echo $grandtotal; ?>" />
         <input type="hidden" name="no_shipping" value="1" />
         <input type="hidden" name="no_note" value="1" />
-        <input type="hidden" name="currency_code" value="PHP" />
+        <input type="hidden" name="currency_code" value="RM" />
         <input type="hidden" name="lc" value="GB" />
         <input type="hidden" name="bn" value="PP-BuyNowBF" /><br />
 		<div style="margin:0 auto; width:50px;">

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -29,7 +29,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -95,16 +95,6 @@
 
 	<br>
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
 		<?php
 			if(isset($_GET['id'])){
 			$id = $_GET['id'];
@@ -115,7 +105,7 @@
 					<center>
 						<img class="img-polaroid" style="width:400px; height:350px;" src="picture/<?php echo $row['product_image']; ?>">
 						<h2 class="text-uppercase bg-primary"><?php echo $row['product_name']?></h2>
-						<h3 class="text-uppercase">Php <?php echo $row['product_price']?></h3>
+						<h3 class="text-uppercase">RM <?php echo $row['product_price']?></h3>
 						<h3 class="text-uppercase">Size: <?php echo $row['product_size']?></h3>
 						<?php echo "<a href='cart.php?id=".$id."&action=add'><input type='submit' class='btn btn-inverse' name='add' value='Add to Cart'></a> &nbsp;  <a href='product1.php'><button class='btn btn-inverse'>Back</button></a> " ?>
 					</center>
@@ -144,9 +134,9 @@
 							<option value="12">12</option>
 						</select>
 						<br />
-						<h4>Total: P <?php echo $row['product_price']; ?> </h4>
+						<h4>Total: RM <?php echo $row['product_price']; ?> </h4>
 						<br />
-						<input type="checkbox" required> I Agree the <a href="#terms" data-toggle="modal"> Terms and Condition</a> of Online Shoe Store Inc.
+						<input type="checkbox" required> I Agree the <a href="#terms" data-toggle="modal"> Terms and Condition</a> of THO THRIFT Inc.
 					</center>
 				</div>
 			<div class="modal-footer">
@@ -162,15 +152,15 @@
 		<div id="terms" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="myModalLabel">Online Shoe Store Inc. Terms and Condition</h3>
+				<h3 id="myModalLabel">THO THRIFT Inc. Terms and Condition</h3>
 			</div>
 				<div class="modal-body">
 					<ul>
 						<li>You are guaranteed that your product will be deliver 2-3 days upon ordering.</li>
 						<li>Guaranteed time maybe suspended depending on the weather conditions for the safety of our delivery personnel.</li>
-						<li>All prices quoted are in Philippine pesos. Price and availability information is subject to change without notice.</li>
+						<li>All prices quoted are in Ringgit Malaysia (RM). Price and availability information is subject to change without notice.</li>
 						<li>Mode of payment are as follows:customers with paypal account can pay through paypal otherwise Cash on Delivery(COD).</li>
-						<li>Upon receiving your product we will charge for delivering for only 150 pesos, depending on the location.</li>
+						<li>Upon receiving your product we will charge for delivering for only RM5, depending on the location.</li>
 					</ul>
 				</div>
 			<div class="modal-footer">
@@ -189,16 +179,16 @@
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script src="../js/bootstrap.js"></script>
@@ -61,7 +61,7 @@
 <body>
 	<div id="header" style="position:fixed;">
 		<img src="../img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>THO THRIFT</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -112,7 +112,7 @@
 								<td><input type="number" name="qty" placeholder="No. of Stock" style="width:250px;" required></td>
 							</tr>
 							<tr>
-								<td><input type="hidden" name="category" value="basketball"></td>
+								<td><input type="hidden" name="category" value="bottom"></td>
 							</tr>
 						</table>
 					</center>
@@ -134,7 +134,7 @@
 					$brand = $_POST['brand'];
 					$category = $_POST['category'];
 					$qty = $_POST['qty'];
-					$code = rand(0,98987787866533499);
+					$code = uniqid();
 
 								$name = $code.$_FILES["product_image"] ["name"];
 								$type = $_FILES["product_image"] ["type"];
@@ -160,7 +160,7 @@
 
 				$q2 = $conn->query("INSERT INTO stock ( product_id, qty) VALUES ('$product_code','$qty')");
 
-				header ("location:admin_product.php");
+				header ("location:admin_bottom.php");
 			}}
 		}
 
@@ -168,13 +168,14 @@
 
 	<div id="leftnav">
 		<ul>
-			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
-			<li><a href="admin_home.php">Products</a>
+			
+		<li><a href="#">Products</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Featured</a></li>
+					<li><a href="admin_top.php "style="font-size:15px; margin-left:15px;">Top</a></li>
+					<li><a href="admin_bottom.php "style="font-size:15px; margin-left:15px;">Bottom</a></li>
+					<li><a href="admin_cap.php" style="font-size:15px; margin-left:15px;">Cap</a></li>
+					
 				</ul>
 			</li>
 			<li><a href="transaction.php">Transactions</a></li>
@@ -221,7 +222,7 @@
 							while($r3 = $Q3->fetch_array()){
 
 							$amnt = $r3['sum(amount)'];
-							echo "<tr><td></td><td>TOTAL : </td> <td><b>Php ".formatMoney($amnt)."</b></td></tr>";
+							echo "<tr><td></td><td>TOTAL : </td> <td><b>RM ".formatMoney($amnt)."</b></td></tr>";
 							}
 							?>
 						  </tbody>

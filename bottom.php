@@ -30,7 +30,7 @@ if (isset($_SESSION['id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -50,14 +50,9 @@ if (isset($_SESSION['id'])) {
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img src="img/logo.jpg">
-		<label>Online Shoe Store</label>
-			<ul>
-				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
-				<li><a href="#login"   data-toggle="modal">Login</a></li>
-			</ul>
-	</div>
+		<?php include 'announcement.html'; ?>
+		<?php include 'navbar.php'; ?>
+
 		<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -125,18 +120,7 @@ if (isset($_SESSION['id'])) {
 			</div>
 	<br>
 <div id="container">
-	<div class="nav">
-
-			 <ul>
-				<li><a href="index.php"><i class="icon-home"></i>Home</a></li>
-				<li><a href="product.php"><i class="icon-th-list"></i>Product</a>
-				<li><a href="aboutus.php"><i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
-
+	
 	<div class="nav1">
 		<ul>
 			<li><a href="product.php">Top</a></li>
@@ -165,7 +149,7 @@ if (isset($_SESSION['id'])) {
 						$rows = $query1->fetch_array();
 
 						$qty = $rows['qty'];
-						if($qty <= 5){
+						if($qty <= 0){
 
 						}else{
 							echo "<div class='float'>";
@@ -173,7 +157,7 @@ if (isset($_SESSION['id'])) {
 							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='picture/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
-							echo "P ".$fetch['product_price']."";
+							echo "RM ".$fetch['product_price']."";
 							echo "<br />";
 							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Size: ".$fetch['product_size']."</h3>";
 							echo "</center>";
@@ -195,16 +179,16 @@ if (isset($_SESSION['id'])) {
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

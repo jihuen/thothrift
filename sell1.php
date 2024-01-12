@@ -79,16 +79,7 @@
 
 	<br>
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
+
 		<img src="img/thrift.png" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
@@ -113,7 +104,7 @@
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyright &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
 		</div>
 
 			<div id="foot">

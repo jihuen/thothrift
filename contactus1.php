@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>THO THRIFT</title>
+	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.js"></script>
@@ -24,9 +25,9 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<?php include 'announcement.html' ?>
+	<?php include 'announcement.html'; ?>
 	<?php include 'navbar.php'; ?>
-		<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
+	<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 					<h3 id="myModalLabel">My Account</h3>
@@ -75,65 +76,39 @@
 
 
 
-
 	<br>
 <div id="container">
 
-		<div class="nav1">
-			<ul>
-				<li><a href="product1.php" class="active" style="color:#111;">Top</a></li>
-				<li>|</li>
-				<li><a href="bottom1.php">Bottom</a></li>
-				<li>|</li>
-				<li><a href="cap1.php">Cap</a></li>
-			</ul>
-				<?php echo "<a href='cart.php?id=".$id."&action=view'><button class='btn btn-inverse' style='right:1%; position:fixed; top:10%;'><i class='icon-shopping-cart icon-white'></i> View Cart</button></a>" ?>
-		</div>
+		<img src="picture/contactus.jpg" style="width:1150px; height:250px; border:1px solid #000; ">
+	<br />
+	<br />
 
-	<div id="content">
-		<br />
-		<br />
-		<div id="product">
+		<div id="content">
 			<form method="post">
-
-			<?php
-				include ('function/addcart.php');
-
-				$query = $conn->query("SELECT *FROM product WHERE category='top' ORDER BY product_id DESC") or die (mysqli_error());
-
-					while($fetch = $query->fetch_array())
-						{
-
-						$pid = $fetch['product_id'];
-
-						$query1 = $conn->query("SELECT * FROM stock WHERE product_id = '$pid'") or die (mysqli_error());
-						$rows = $query1->fetch_array();
-
-						$qty = $rows['qty'];
-						if($qty <= 0){
-
-						}else{
-							echo "<div class='float'>";
-							echo "<center>";
-							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='picture/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
-							echo "".$fetch['product_name']."";
-							echo "<br />";
-							echo "RM ".$fetch['product_price']."";
-							echo "<br />";
-							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Size: ".$fetch['product_size']."</h3>";
-							echo "</center>";
-							echo "</div>";
-						}
-						}
-			?>
-
+				<table style="position:relative; left:25%;">
+					<tr>
+						<td style="font-size:20px;">Email:</td><td><input type="email" name="email" value="<?php echo $fetch['email']; ?>" style="width:400px;" disabled></td>
+					</tr>
+					<tr>
+						<td style="font-size:20px;">Message:</td><td><textarea name="message" style="width:400px; height:300px;" required></textarea></td>
+					</tr>
+					<tr>
+						<td></td><td><button class="btn btn-info" name="send" style="width:300px;"><i class="icon icon-ok icon-white"></i>Submit</button>&nbsp;<a href="index.php"><button class="btn btn-danger" style="width:110px;"><i class="icon icon-remove icon-white"></i>Cancel</button></a></td>
+					</tr>
+				</table>
 			</form>
 		</div>
+		<?php
 
 
+			if(isset($POST['send']));
+			{
+				@$email = $_POST['email'];
+				@$message = $_POST['message'];
 
-
-	</div>
+				$conn->query ("INSERT INTO `contact` (email, message) VALUES ('$email', '$message')") or die (mysqli_error());
+			}
+		?>
 
 	<br />
 </div>
@@ -141,16 +116,16 @@
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">THO THRIFT Inc. 2024 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

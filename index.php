@@ -104,16 +104,6 @@ if (isset($_SESSION['id'])) {
 
 	
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="index.php"><i class="icon-home"></i>Home</a></li>
-				<li><a href="product.php"><i class="icon-th-list"></i>Product</a>
-				<li><a href="aboutus.php"><i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
 
 	<div id="carousel">
 		<div id="myCarousel" class="carousel slide">
@@ -136,7 +126,7 @@ if (isset($_SESSION['id'])) {
 
 
 	<div id="content">
-		<div id="product" style="position:relative; margin-top:30%;">
+		<div id="product" style="position:relative;">
 			<center><h2><legend>Featured Items</legend></h2></center>
 			<br />
 
@@ -182,16 +172,16 @@ if (isset($_SESSION['id'])) {
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyright &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024  </p>
 		</div>
 
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+						 <a href="#"><li>Facebook</li></a>
+						<a href="#"><li>Twitter</li></a>
+						<a href="#"><li>Pinterest</li></a>
+						<a href="#"><li>Tumblr</li></a>
 					</ul>
 			</div>
 	</div>

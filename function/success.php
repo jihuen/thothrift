@@ -4,8 +4,8 @@ $item_transaction   = $_REQUEST['tx']; // Paypal transaction ID
 $item_price         = $_REQUEST['amt']; // Paypal received amount
 $item_currency      = $_REQUEST['cc']; // Paypal received currency type
 
-$price = '10.00';
-$currency='USD';
+$price = '1.00';
+$currency='RM';
 
 //Rechecking the product price and currency details
 if($item_price==$price && $item_currency==$currency)

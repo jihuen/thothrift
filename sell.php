@@ -30,7 +30,7 @@ if (isset($_SESSION['id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>THO THRIFT</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -101,31 +101,24 @@ if (isset($_SESSION['id'])) {
 
 	<br>
 <div id="container">
-	<div class="nav">
-			 <ul>
-				<li><a href="index.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
-	</div>
 
 		<img src="img/thrift.png" style="width:1150px; height:250px; border:1px solid #000; ">
 	<br />
 	<br />
 
-	<legend>About Us</legend>
+	<legend>Freshen up your style. For your wallet. For the planet.</legend>
 		<div id="content">
-			<legend><h3>At THO THRIFT, we believe that fashion doesn't have to be costly</h3></legend>
-					<h4>Fashion is more than just wearing expensive clothes. It about making the most out of what we have.
-				In our store, we provide hand-picked beautiful clothes with just the cost of a fraction of your typical daily spending.</h4>
+			<legend><h3>Clean out your wardrobe at THO THRIFT!</h3></legend>
+					<h4>Ever get tired and overwhelmed with the many clothes that are stored in your wardrobe?
+						We are here for you! Clear up your clothes collection at THO THRIFT! 
+					</h4>
 			<br />
-				<legend><h3>Thrifting is here to stay.</h3></legend>
-					<h4>Reselling used clothes not only does good for those who wants to refresh their fashion needs,
-						 but also does good for the planet. We give new life to countless of used clothings, while also
-						 offsetting the environment cost of fashion.
+				<legend><h3>How does it work?</h3></legend>
+					<h4>On every Thursday, pack your clothes (Minimum 5 pcs) that you are no 
+						longer wearing and meet us at HEP UTHM! Each of your clothes will be inspected by our team, 
+						and within a short period, you will receive a quote for your clothes. Upon agreement, we will 
+						take your clothes into good hands and pay you immediately!
+						(Note: We accept Womenswear and Menswear.)
 					</h4>
 			<br />
 		</div>
@@ -135,7 +128,7 @@ if (isset($_SESSION['id'])) {
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Online Shoe Store Inc. 2017 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
+			<p style="font-size:25px;">THO THRIFT Inc. 2024 Brought To You by <a href="https://code-projects.org/">Code-Projects</a></p>
 		</div>
 
 			<div id="foot">
