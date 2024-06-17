@@ -22,8 +22,8 @@
     <?php
     } else {
     ?>
-      <li><a class="account" href="#login" data-toggle="modal">Login</a></li>
-      <li><a class="account" href="#signup" data-toggle="modal">Sign Up</a></li>
+      <li><a class="account" href="login.php">Login</a></li>
+      <li><a class="account" href="signup.php">Sign Up</a></li>
     <?php
     }
     ?>
