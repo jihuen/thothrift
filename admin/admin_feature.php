@@ -77,7 +77,7 @@
 							?>
 							<tr>
 								<td><input type="text" name="product_name" placeholder="Product Name" style="width:250px;" required></td>
-							<tr/>
+							</tr>
 							<tr>
 								<td><input type="text" name="product_price" placeholder="Price" style="width:250px;" required></td>
 							</tr>

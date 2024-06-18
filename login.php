@@ -9,34 +9,40 @@ if ($conn->connect_error) {
 
 // Process login form submission
 if (isset($_POST['login'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    // Validate email format
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $error_message = "Invalid email format";
+    } else {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-    // Prepare SQL statement to fetch user details
-    $stmt = $conn->prepare("SELECT * FROM customer WHERE email=?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+        // Prepare SQL statement to fetch user details
+        $stmt = $conn->prepare("SELECT * FROM customer WHERE email=?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
 
-        // Verify password using password_verify
-        if (password_verify($password, $row['password'])) {
-            // Password is correct, store user information in session
-            $_SESSION['id'] = $row['customerid'];
-            $_SESSION['firstname'] = $row['firstname'];
-            header("Location: ./index.php");
-            exit();
+            // Verify password using password_verify
+            if (password_verify($password, $row['password'])) {
+                // Password is correct, store user information in session
+                $_SESSION['id'] = $row['customerid'];
+                $_SESSION['firstname'] = $row['firstname'];
+                header("Location: ./index.php");
+                exit();
+            } else {
+                // Incorrect password
+                $error_message = "Invalid Email or Password";
+            }
         } else {
-            // Incorrect password
+            // No user found with the provided email
             $error_message = "Invalid Email or Password";
         }
-    } else {
-        // No user found with the provided email
-        $error_message = "Invalid Email or Password";
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
