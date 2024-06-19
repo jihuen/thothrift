@@ -2,7 +2,6 @@
 	include("function/session.php");
 	include("db/dbconn.php");
 	include("function/cash.php");
-	include("function/paypal.php");
 ?>
 <!DOCTYPE html>
 <html>
