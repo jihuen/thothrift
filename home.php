@@ -98,9 +98,9 @@
 				<source src="video/thrift video.mp4" type="video/mp4">
 			</video>
 		</div>
+		<center><h2><legend>Featured Items</legend></h2></center>
 
 		<div id="product" style="position:relative;">
-			<center><h2><legend>Featured Items</legend></h2></center>
 			<br />
 
 			<?php

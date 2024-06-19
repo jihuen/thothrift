@@ -122,25 +122,6 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 	<legend></legend>
 	<h4>TOTAL: RM <?php echo $amnt; ?></h4>
 	</form>
-	<div class='pull-right'>
-<div class="">
-    <form action="<?php echo $paypal_url ?>" method="post" >
-    <input type="hidden" name="business" value="<?php echo $paypal_id; ?>">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="item_name" value="Alphaware Shoes">
-    <input type="hidden" name="item_number" value="<?php echo $t_id; ?>">
-    <input type="hidden" name="credits" value="510">
-    <input type="hidden" name="userid" value="1">
-    <input type="hidden" name="amount" value="<?php echo $amnt; ?>">
-    <input type="hidden" name="cpp_header_image" value="http://www.phpgang.com/wp-content/uploads/gang.jpg">
-    <input type="hidden" name="no_shipping" value="1">
-    <input type="hidden" name="currency_code" value="RM">
-    <input type="hidden" name="handling" value="0">
-    <input type="hidden" name="cancel_return" value="function/cancel.php">
-    <input type="hidden" name="return" value="function/success.php">
-    </form>
-</div>
-	</div>
 
 </div>
 <br />
