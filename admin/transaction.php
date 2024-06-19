@@ -200,14 +200,22 @@
 					<td><?php echo $name; ?></td>
 					<td><?php echo $amnt; ?></td>
 					<td><?php echo $o_stat; ?></td>
-					<td><a href="receipt.php?tid=<?php echo $id; ?>">View</a>
+					<td><?php
+					if($o_stat == 'Confirmed'){
+						echo '<a href="receipt.php?tid=<?php echo $id; ?>">View</a>';
+					}elseif($o_stat == 'Cancelled'){
+						echo '<a href="receipt.php?tid=<?php echo $id; ?>">View</a>';
+					}else{
+				
+					}
+					?>
 					<?php
 					if($o_stat == 'Confirmed'){
 
 					}elseif($o_stat == 'Cancelled'){
 
 					}else{
-					echo '| <a class="btn btn-mini btn-info" href="confirm.php?id='.$id.'">Confirm</a> ';
+					echo '<a class="btn btn-mini btn-info" href="confirm.php?id='.$id.'">Confirm</a> ';
 					echo '| <a class="btn btn-mini btn-danger" href="cancel.php?id='.$id.'">Cancel</a></td>';
 					}
 					?>

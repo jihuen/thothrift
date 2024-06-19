@@ -188,6 +188,9 @@
 	<div id="rightcontent" style="position:absolute; top:10%;">
 			<div class="alert alert-info"><center><h2>Orders</h2></center></div>
 			<br />
+			<br />
+				<label  style="padding:5px; float:right;"><input type="text" name="filter" placeholder="Search Order Here..." id="filter"></label>
+			<br />
 				<div style='width:975px;' class="alert alert-info">
 					  <table class="table table-hover">
 						<thead>

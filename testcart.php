@@ -179,64 +179,50 @@ if (isset($_SESSION['cart']))
 
 
 	<div class='pull-right'>
-            <a href='home.php' class='btn btn-inverse btn-lg'>Continue Shopping</a>
-            <?php echo "<button type='button' class='btn btn-inverse btn-lg' data-toggle='modal' data-target='#confirmPurchaseModal'>Purchase</button>"; ?>
+	<a href='home.php' class='btn btn-inverse btn-lg'>Continue Shopping</a>
+	<?php echo "<button name='pay_now' type='submit' class='btn btn-inverse btn-lg' >Purchase</button>";
 
+if (isset($_POST['pay_now'])) {
+    // Generate transaction ID
+    include("./function/random_code.php"); // Assuming this file generates a random code
 
-    <div id="confirmPurchaseModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-            <h3 id="myModalLabel">Proceed with Purchase</h3>
-        </div>
-        <div class="modal-body">
-            <p>Do you want to confirm the purchase?</p>
-        </div>
-        <div class="modal-footer">
-                <button type="submit" name="pay_now" class="btn btn-success">Yes</button>
-				<?php 
-				if (isset($_POST['pay_now'])) {
-					// Generate transaction ID
-					include("./function/random_code.php"); // Assuming this file generates a random code
+    $t_id = $r_id; // Assign the generated random code to $t_id
 
-					$t_id = $r_id; // Assign the generated random code to $t_id
+    // Process payment here
+    $cid = (int)$_SESSION['id'];
+    $total = $_POST['total'];
+    $p_id = $_POST['pid'];
+    $oqty = $_POST['qty'];
+	// For debugging purposes, print out the values
+    echo "Customer ID: " . $cid . "<br>";
+    echo "Total: " . $total . "<br>";
+    echo "Product IDs: ";
+    print_r($p_id);
+    echo "<br>";
+    echo "Quantities: ";
+    print_r($oqty);
+    echo "<br>";
 
-					// Process payment here
-					$cid = (int)$_SESSION['id'];
-					$total = $_POST['total'];
-					$p_id = $_POST['pid'];
-					$oqty = $_POST['qty'];
-					// For debugging purposes, print out the values
-					echo "Customer ID: " . $cid . "<br>";
-					echo "Total: " . $total . "<br>";
-					echo "Product IDs: ";
-					print_r($p_id);
-					echo "<br>";
-					echo "Quantities: ";
-					print_r($oqty);
-					echo "<br>";
+    // Insert into transaction table
+    $date = date("M d, Y");
+    $que = $conn->query("INSERT INTO `transaction` (transaction_id, customerid, amount, order_stat, order_date) 
+                        VALUES ('$t_id', '$cid', '$total', 'ON HOLD', '$date')") or die(mysqli_error($conn));
 
-					// Insert into transaction table
-					$date = date("M d, Y");
-					$que = $conn->query("INSERT INTO `transaction` (transaction_id, customerid, amount, order_stat, order_date) 
-										VALUES ('$t_id', '$cid', '$total', 'ON HOLD', '$date')") or die(mysqli_error($conn));
+    // Insert into transaction_detail table
+    $i = 0;
+    foreach ($p_id as $pro_id) {
+        $conn->query("INSERT INTO `transaction_detail` (`product_id`, `order_qty`, `transaction_id`) 
+                    VALUES ('$pro_id', '$oqty[$i]', '$t_id')") or die(mysqli_error($conn));
+        $i++;
+    }
 
-					// Insert into transaction_detail table
-					$i = 0;
-					foreach ($p_id as $pro_id) {
-						$conn->query("INSERT INTO `transaction_detail` (`product_id`, `order_qty`, `transaction_id`) 
-									VALUES ('$pro_id', '$oqty[$i]', '$t_id')") or die(mysqli_error($conn));
-						$i++;
-					}
+    // Redirect to summary page after successful payment
+    header("Location: summary.php?tid=$t_id");
+    exit(); // Ensure no further output after redirection
+}
 
-					// Redirect to summary page after successful payment
-					header("Location: summary.php?tid=$t_id");
-					exit(); // Ensure no further output after redirection
-				}
-				?>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-            </form>
-        </div>
-    </div>
+	?>
+	</div>
 	</form>
 	</div>
 
