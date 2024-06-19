@@ -80,25 +80,27 @@
 	<br>
 <div id="container">
 
-		<img src="img/thrift.png" style="width:1150px; height:250px; border:1px solid #000; ">
-	<br />
-	<br />
+<img src="img/thrift.png" style="width:1150px; height:250px; border:1px solid #000; ">
+<br />
+<br />
 
-
-	<legend>About Us</legend>
-		<div id="content">
-			<legend><h3>At THO THRIFT, we believe that fashion doesn't have to be costly</h3></legend>
-					<h4>Fashion is more than just wearing expensive clothes. It about making the most out of what we have.
-				In our store, we provide hand-picked beautiful clothes with just the cost of a fraction of your typical daily spending.</h4>
-			<br />
-				<legend><h3>Thrifting is here to stay.</h3></legend>
-					<h4>Reselling used clothes not only does good for those who wants to refresh their fashion needs,
-						 but also does good for the planet. We give new life to countless of used clothings, while also
-						 offsetting the environment cost of fashion.
-					</h4>
-			<br />
-		</div>
+<legend>Freshen up your style. For your wallet. For the planet.</legend>
+<div id="content">
+	<legend><h3>Clean out your wardrobe at THO THRIFT!</h3></legend>
+			<h4>Ever get tired and overwhelmed with the many clothes that are stored in your wardrobe?
+				We are here for you! Clear up your clothes collection at THO THRIFT! 
+			</h4>
 	<br />
+		<legend><h3>How does it work?</h3></legend>
+			<h4>On every Thursday, pack your clothes (Minimum 5 pcs) that you are no 
+				longer wearing and meet us at HEP UTHM! Each of your clothes will be inspected by our team, 
+				and within a short period, you will receive a quote for your clothes. Upon agreement, we will 
+				take your clothes into good hands and pay you immediately!
+				(Note: We accept Womenswear and Menswear.)
+			</h4>
+	<br />
+</div>
+<br />
 </div>
 	<br />
 	<div id="footer">
