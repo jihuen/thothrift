@@ -78,13 +78,10 @@ if (isset($_SESSION['id'])) {
 			<source src="video/thrift video.mp4" type="video/mp4">
 		</video>
 	</div>
-
-
+	<center><h2>Featured Items</h2></center>
 	<div id="content">
 		<div id="product" style="position:relative;">
-			<center><h2><legend>Featured Items</legend></h2></center>
-			<br />
-
+			<br/>
 			<?php
 
 				$query = $conn->query("SELECT *FROM product WHERE category='feature' ORDER BY product_id DESC") or die (mysqli_error());
@@ -116,9 +113,6 @@ if (isset($_SESSION['id'])) {
 						}
 			?>
 		</div>
-
-
-
 	</div>
 
 	<br />
